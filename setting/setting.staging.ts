@@ -7,5 +7,5 @@ export const SETTING: SystemSetting = {
 		SERVICE_PATH: "http://localhost:8080",
 	},
 
-	STATE: ENVIRONMENT_STATE.DEFAULT_STATE,
+	STATE: ENVIRONMENT_STATE.STAGING_STATE,
 };
