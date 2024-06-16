@@ -2,12 +2,16 @@
 	"name": "swisspine-exam",
 	"version": "0.0.0",
 	"description": "SwissPine Technical Exam",
-	"main": "index.js",
+	"main": "index.ts",
 	"engines": {
 		"node": ">=20.13.1"
 	},
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"ng": "ng",
+		"start": "ng serve",
+		"build": "ng build",
+		"watch": "ng build --watch --configuration development",
+		"test": "ng test"
 	},
 	"keywords": [
 		"swisspine",

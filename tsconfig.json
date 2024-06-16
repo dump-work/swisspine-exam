@@ -46,7 +46,6 @@
 			"@constant/*": ["./constant/*"],
 			"@configure/*": ["./configure/*"],
 			"@connector/*": ["./connector/*"],
-			"@dashboard/*": ["./app/dashboard/*"],
 			"@data/*": ["./data/*"],
 			"@event/*": ["./event/*"],
 			"@global/*": ["./global/*"],
@@ -55,7 +54,8 @@
 			"@setting/*": ["./setting/*"],
 			"@service/*": ["./service/*"],
 			"@type/*": ["./type/*"],
-			"@utility/*": ["./utility/*"]
+			"@utility/*": ["./utility/*"],
+			"@view/*": ["./view/*"]
 		}
 	},
 
