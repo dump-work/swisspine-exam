@@ -1,6 +1,7 @@
-# 	swisspine-exam
+# swisspine-exam
 
-## 	library
+## library
 
-###	Library Structure
-Business logic related reusable procedures
+### Library Structure
+
+Business logic related reusable procedure.

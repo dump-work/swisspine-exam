@@ -6,10 +6,11 @@ import { getEnvironmentSetting } from "@library/get-environment-setting";
 
 type GetEnvironmentSettingServiceOption = {};
 
-export async function getEnvironmentSettingService({}: GetEnvironmentSettingServiceOption = {}): Promise<EnvironmentSetting> {
+async function getEnvironmentSettingService({}: GetEnvironmentSettingServiceOption = {}): Promise<EnvironmentSetting> {
 	return await getEnvironmentSetting();
 }
 
-GLOBAL.INTERFACE?.get("/environment/setting", async (context) =>
-	context.json(await getEnvironmentSettingService())
-);
+export default () =>
+	GLOBAL.SERVICE?.get("/environment/setting", async (context) =>
+		context.json(await getEnvironmentSettingService())
+	);

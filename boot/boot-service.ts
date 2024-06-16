@@ -1,15 +1,15 @@
 import { serve } from "@hono/node-server";
 
-import { GLOBAL } from "@/utility/global";
+import { GLOBAL } from "@utility/global";
 
-import * as GetEnvironmentSettingService from "@service/get-environment-setting-service";
+import GetEnvironmentSettingService from "@service/get-environment-setting-service";
 
 type BootServiceOption = {};
 
 export async function bootService({}: BootServiceOption = {}): Promise<boolean> {
-	GetEnvironmentSettingService;
+	GetEnvironmentSettingService();
 
-	return new Promise<boolean>((resolve, reject) => {
+	return await new Promise<boolean>((resolve, reject) => {
 		process.nextTick(() => {
 			if (GLOBAL.SERVICE) {
 				try {

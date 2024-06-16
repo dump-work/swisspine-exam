@@ -1,6 +1,6 @@
 import { SafeObject } from "@type/safe-object";
 
-export function harden<D, V>(
+export function harden<D extends object, V>(
 	context: D | SafeObject,
 	field: string,
 	value: V

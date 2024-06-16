@@ -7,15 +7,7 @@ import { GLOBAL } from "@utility/global";
 type ConfigureServiceOption = {};
 
 export async function configureService({}: ConfigureServiceOption = {}): Promise<boolean> {
-	harden(global, "SERVICE", new Hono());
+	harden(global, "SERVICE", new Hono().basePath("/service/interface"));
 
-	harden(global, "INTERFACE", new Hono());
-
-	if (GLOBAL.SERVICE && GLOBAL.INTERFACE) {
-		GLOBAL.SERVICE?.route("/service/interface", GLOBAL.INTERFACE);
-
-		return true;
-	}
-
-	return false;
+	return "SERVICE" in GLOBAL;
 }

@@ -8,7 +8,6 @@ import { EnvironmentState } from "@type/environment-state";
 
 export type GlobalContext = {
 	SERVICE?: Hono;
-	INTERFACE?: Hono;
 	ERROR?: Error[];
 	SETTING?: SystemSetting;
 } & Partial<typeof globalThis> &
