@@ -4,7 +4,7 @@
 	"description": "SwissPine Technical Exam",
 	"main": "index.js",
 	"engines": {
-		"node": ">=14.5.0"
+		"node": ">=20.13.1"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
@@ -26,5 +26,11 @@
 	"bugs": {
 		"url": "https://github.com/dump-work/swisspine-exame/issues"
 	},
-	"homepage": "https://github.com/dump-work/swisspine-exame#readme"
+	"homepage": "https://github.com/dump-work/swisspine-exame#readme",
+	"dependencies": {
+		"rxjs": "^7.8.1"
+	},
+	"devDependencies": {
+		"@types/node": "^20.14.2"
+	}
 }
