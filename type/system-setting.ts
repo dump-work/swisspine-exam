@@ -6,6 +6,8 @@ import {
 export type SystemSetting = {
 	SERVICE?: {
 		SERVICE_PATH?: string;
+		SERVICE_HOST_ADDRESS?: string;
+		SERVICE_PORT_NUMBER?: number;
 	};
 
 	STATE?: ENVIRONMENT_STATE;
