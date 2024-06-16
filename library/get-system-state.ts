@@ -6,11 +6,11 @@ import {
 export async function getSystemState(
 	targetState?: ENVIRONMENT_STATE
 ): Promise<ENVIRONMENT_STATE> {
+	const state: string | undefined = process.env["STATE"];
+
 	return (
 		targetState ||
-		(process.env.STATE &&
-			checkEnvironmentState(process.env.STATE) &&
-			process.env.STATE) ||
+		(state && checkEnvironmentState(state) && state) ||
 		ENVIRONMENT_STATE.DEVELOP_STATE
 	);
 }

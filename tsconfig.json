@@ -2,21 +2,43 @@
 	"compileOnSave": false,
 	"compilerOptions": {
 		"baseUrl": "./",
+		"module": "NodeNext",
 		"outDir": "./build",
+
 		"sourceMap": true,
+		"sourceRoot": "/",
+
+		"moduleResolution": "NodeNext",
+
+		"target": "ESNext",
+		"lib": ["ESNext", "dom"],
+
+		"types": ["node"],
+		"typeRoots": ["node_modules/@types"],
+
+		"alwaysStrict": true,
+		"strict": true,
+		"strictNullChecks": true,
+
+		"allowUnreachableCode": false,
 		"declaration": false,
 		"downlevelIteration": true,
+		"esModuleInterop": true,
 		"experimentalDecorators": true,
-		"module": "es2020",
-		"moduleResolution": "node",
-		"importHelpers": true,
-		"target": "es2020",
-		"typeRoots": ["node_modules/@types"],
-		"lib": ["es2020", "dom"],
-		"types": ["node"],
-		"skipLibCheck": true,
-		"strict": true,
 		"forceConsistentCasingInFileNames": true,
+		"importHelpers": true,
+		"removeComments": true,
+		"skipLibCheck": true,
+
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitAny": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+
 		"paths": {
 			"@/*": ["./*"],
 			"@boot/*": ["./boot/*"],
@@ -36,6 +58,15 @@
 			"@utility/*": ["./utility/*"]
 		}
 	},
+
+	"angularCompilerOptions": {
+		"enableI18nLegacyMessageIdFormat": false,
+		"strictInjectionParameters": true,
+		"strictInputAccessModifiers": true,
+		"strictTemplates": true
+	},
+
 	"include": ["**/*.ts"],
+
 	"exclude": ["node_modules", "build"]
 }

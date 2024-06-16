@@ -1,5 +1,3 @@
-import { flatten, unflatten } from "flat";
-
 import { GlobalContext } from "@type/global-context";
 
 import { ENVIRONMENT_STATE } from "@type/environment-state";
@@ -29,6 +27,8 @@ export async function resolveSystemSetting({
 	state,
 	context,
 }: ResolveSystemSettingOption = {}): Promise<GlobalContext> {
+	const { flatten, unflatten } = await import("flat");
+
 	context = context || global;
 
 	state = await getSystemState(state);
