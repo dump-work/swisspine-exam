@@ -1,0 +1,43 @@
+{
+	"compilerOptions": {
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"allowJs": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"noEmit": true,
+		"esModuleInterop": true,
+		"module": "esnext",
+		"target": "esnext",
+		"moduleResolution": "bundler",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"incremental": true,
+		"forceConsistentCasingInFileNames": true,
+		"plugins": [
+			{
+				"name": "next"
+			}
+		],
+		"paths": {
+			"@/*": ["./*"],
+			"@boot/*": ["./boot/*"],
+			"@component/*": ["./component/*"],
+			"@constant/*": ["./constant/*"],
+			"@configure/*": ["./configure/*"],
+			"@connector/*": ["./connector/*"],
+			"@dashboard/*": ["./app/dashboard/*"],
+			"@data/*": ["./data/*"],
+			"@event/*": ["./event/*"],
+			"@global/*": ["./global/*"],
+			"@library/*": ["./library/*"],
+			"@sample/*": ["./sample/*"],
+			"@setting/*": ["./setting/*"],
+			"@service/*": ["./service/*"],
+			"@type/*": ["./type/*"],
+			"@utility/*": ["./utility/*"]
+		}
+	},
+	"include": ["**/*.ts"],
+	"exclude": ["node_modules"]
+}
