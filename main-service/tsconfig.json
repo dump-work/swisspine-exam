@@ -2,13 +2,12 @@
 	"compileOnSave": false,
 	"compilerOptions": {
 		"baseUrl": "./",
-		"module": "NodeNext",
+		"module": "ES2022",
+		"moduleResolution": "Bundler",
 		"outDir": "./build",
 
 		"sourceMap": true,
 		"sourceRoot": "/",
-
-		"moduleResolution": "NodeNext",
 
 		"target": "ESNext",
 		"lib": ["ESNext", "dom"],
@@ -20,14 +19,19 @@
 		"strict": true,
 		"strictNullChecks": true,
 
+		"allowImportingTsExtensions": true,
+		"noEmit": true,
 		"allowUnreachableCode": false,
+		"allowSyntheticDefaultImports": true,
 		"declaration": false,
 		"downlevelIteration": true,
 		"esModuleInterop": true,
 		"experimentalDecorators": true,
 		"forceConsistentCasingInFileNames": true,
 		"importHelpers": true,
+		"isolatedModules": true,
 		"removeComments": true,
+		"resolveJsonModule": true,
 		"skipLibCheck": true,
 
 		"noFallthroughCasesInSwitch": true,
@@ -66,7 +70,7 @@
 		"strictTemplates": true
 	},
 
-	"include": ["**/*.ts"],
+	"include": ["**/*.ts", "**/*.mts"],
 
 	"exclude": ["node_modules", "build"]
 }

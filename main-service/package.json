@@ -1,0 +1,71 @@
+{
+	"name": "swisspine-exam",
+	"version": "0.0.0",
+	"description": "SwissPine Technical Exam",
+	"main": "index.ts",
+	"engines": {
+		"node": ">=20.13.1"
+	},
+	"scripts": {
+		"preinstall": "npm install typescript tsc tsc-alias rimraf pm2 --global",
+		"postinstall": "npm run build:source",
+		"build:source": "tsc && tsc-alias",
+		"prestart:service": "npm run build:source",
+		"start:service": "pm2 start ./build --name=main",
+		"stop:service": "pm2 stop main",
+		"restart:service": "npm run stop:service && pm2 flush && npm run start:service && pm2 logs --lines 1000",
+		"ng": "ng",
+		"start:client": "ng serve",
+		"build:client": "ng build",
+		"watch:client": "ng build --watch --configuration development",
+		"test:client": "ng test"
+	},
+	"keywords": [
+		"swisspine",
+		"technical",
+		"exam"
+	],
+	"author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+	"contributors": [
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dump-work/swisspine-exame.git"
+	},
+	"bugs": {
+		"url": "https://github.com/dump-work/swisspine-exame/issues"
+	},
+	"homepage": "https://github.com/dump-work/swisspine-exame#readme",
+	"dependencies": {
+		"@angular/animations": "^18.0.0",
+		"@angular/common": "^18.0.0",
+		"@angular/compiler": "^18.0.0",
+		"@angular/core": "^18.0.0",
+		"@angular/forms": "^18.0.0",
+		"@angular/platform-browser": "^18.0.0",
+		"@angular/platform-browser-dynamic": "^18.0.0",
+		"@angular/router": "^18.0.0",
+		"@hono/node-server": "^1.11.3",
+		"flat": "^6.0.1",
+		"hono": "^4.4.6",
+		"rxjs": "^7.8.1",
+		"tslib": "^2.6.3",
+		"zone.js": "^0.14.7"
+	},
+	"devDependencies": {
+		"@angular-devkit/build-angular": "^18.0.4",
+		"@angular/cli": "^18.0.4",
+		"@angular/compiler-cli": "^18.0.0",
+		"@types/jasmine": "~5.1.0",
+		"@types/node": "^20.14.2",
+		"jasmine-core": "~5.1.0",
+		"karma": "~6.4.0",
+		"karma-chrome-launcher": "~3.2.0",
+		"karma-coverage": "~2.2.0",
+		"karma-jasmine": "~5.1.0",
+		"karma-jasmine-html-reporter": "~2.1.0",
+		"typescript": "^5.4.5"
+	}
+}

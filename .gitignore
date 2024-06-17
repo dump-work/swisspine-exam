@@ -2,6 +2,8 @@
 
 .*
 
+.*/**/*.*
+
 !.gitignore
 
 !.npmignore
@@ -31,6 +33,7 @@
 !*.ts
 !*.tsx
 !*.mjs
+!*.mts
 !*.html
 !*.css
 
@@ -72,6 +75,7 @@
 !*/*.ts
 !*/*.tsx
 !*/*.mjs
+!*/*.mts
 !*/*.html
 !*/*.css
 
