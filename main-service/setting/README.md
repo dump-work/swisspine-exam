@@ -1,3 +1,3 @@
-# 	swisspine-exam
+# swisspine-exam
 
-## 	setting
+## setting

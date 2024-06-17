@@ -4,10 +4,7 @@ import { SystemSetting } from "@type/system-setting";
 
 export type EnvironmentSetting = Omit<SystemSetting, "STORAGE">;
 
-export const ENVIRONMENT_SETTING_FIELD_LIST: Array<keyof EnvironmentSetting> = [
-	"SERVICE",
-	"STATE",
-];
+export const ENVIRONMENT_SETTING_FIELD_LIST: Array<keyof EnvironmentSetting> = ["SERVICE", "STATE"];
 
 export function checkEnvironmentSetting(
 	environmentSetting: any,
@@ -24,10 +21,8 @@ export function checkEnvironmentSetting(
 			(typeof environmentSetting.SERVICE === "object" &&
 				environmentSetting.SERVICE !== null &&
 				(!("SERVICE_PATH" in environmentSetting.SERVICE) ||
-					typeof environmentSetting.SERVICE.SERVICE_PATH ===
-						"string"))) &&
-		(!("STATE" in environmentSetting) ||
-			checkEnvironmentState(environmentSetting.STATE))
+					typeof environmentSetting.SERVICE.SERVICE_PATH === "string"))) &&
+		(!("STATE" in environmentSetting) || checkEnvironmentState(environmentSetting.STATE))
 	);
 }
 

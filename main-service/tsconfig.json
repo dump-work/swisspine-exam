@@ -28,6 +28,7 @@
 			"@sample/*": ["./sample/*"],
 			"@setting/*": ["./setting/*"],
 			"@service/*": ["./service/*"],
+			"@type/*": ["./type/*"],
 			"@utility/*": ["./utility/*"],
 			"@view/*": ["./view/*"]
 		}
