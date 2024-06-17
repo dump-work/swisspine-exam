@@ -1,3 +1,10 @@
 import { Routes } from "@angular/router";
 
-export const mainRouteList: Routes = [];
+import { ExternalSystemComponent } from "@component/external-system/external-system.component";
+
+export const mainRouteList: Routes = [
+	{
+		path: "external-system",
+		component: ExternalSystemComponent,
+	},
+];
