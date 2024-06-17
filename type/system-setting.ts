@@ -1,7 +1,4 @@
-import {
-	checkEnvironmentState,
-	ENVIRONMENT_STATE,
-} from "@type/environment-state";
+import { checkEnvironmentState, ENVIRONMENT_STATE } from "@type/environment-state";
 
 export type SystemSetting = {
 	SERVICE?: {
@@ -17,9 +14,7 @@ export type SystemSetting = {
 	};
 };
 
-export function checkSystemSetting(
-	systemSetting: any
-): systemSetting is SystemSetting {
+export function checkSystemSetting(systemSetting: any): systemSetting is SystemSetting {
 	return (
 		typeof systemSetting === "object" &&
 		systemSetting !== null &&
@@ -28,20 +23,16 @@ export function checkSystemSetting(
 				systemSetting.SERVICE !== null &&
 				(!("SERVICE_PATH" in systemSetting.SERVICE) ||
 					typeof systemSetting.SERVICE.SERVICE_PATH === "string"))) &&
-		(!("STATE" in systemSetting) ||
-			checkEnvironmentState(systemSetting.STATE)) &&
+		(!("STATE" in systemSetting) || checkEnvironmentState(systemSetting.STATE)) &&
 		(!("STORAGE" in systemSetting) ||
 			(typeof systemSetting.STORAGE === "object" &&
 				systemSetting.STORAGE !== null &&
 				(!("STORAGE_CONNECTION_PATH" in systemSetting.STORAGE) ||
-					typeof systemSetting.STORAGE.STORAGE_CONNECTION_PATH ===
-						"string")))
+					typeof systemSetting.STORAGE.STORAGE_CONNECTION_PATH === "string")))
 	);
 }
 
-export function assertSystemSetting(
-	systemSetting: any
-): asserts systemSetting is SystemSetting {
+export function assertSystemSetting(systemSetting: any): asserts systemSetting is SystemSetting {
 	if (!checkSystemSetting(systemSetting)) {
 		throw new Error("invalid system setting");
 	}

@@ -1,7 +1,4 @@
-import {
-	castEnvironmentSetting,
-	EnvironmentSetting,
-} from "@type/environment-setting";
+import { castEnvironmentSetting, EnvironmentSetting } from "@type/environment-setting";
 
 type RequestGetEnvironmentSettingOption = {};
 

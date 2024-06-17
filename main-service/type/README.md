@@ -1,3 +1,0 @@
-# 	swisspine-exam
-
-## 	type

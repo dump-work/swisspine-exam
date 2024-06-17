@@ -5,6 +5,10 @@
 	"engines": {
 		"node": ">=20.13.1"
 	},
+	"scripts": {
+		"preinstall": "npm install typescript tsc tsc-alias rimraf pm2 @angular/cli --global",
+		"postinstall": "npm install --prefix ./main-service && npm install --prefix ./main-client"
+	},
 	"keywords": [
 		"swisspine",
 		"technical",
@@ -22,5 +26,15 @@
 	"bugs": {
 		"url": "https://github.com/dump-work/swisspine-exame/issues"
 	},
-	"homepage": "https://github.com/dump-work/swisspine-exame#readme"
+	"homepage": "https://github.com/dump-work/swisspine-exame#readme",
+	"dependencies": {
+		"@hono/node-server": "^1.11.3",
+		"hono": "^4.4.6",
+		"rxjs": "^7.8.1",
+		"tslib": "^2.6.3"
+	},
+	"devDependencies": {
+		"@types/node": "^20.14.2",
+		"typescript": "^5.4.5"
+	}
 }

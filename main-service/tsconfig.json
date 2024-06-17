@@ -12,9 +12,6 @@
 		"target": "ESNext",
 		"lib": ["ESNext", "dom"],
 
-		"types": ["node"],
-		"typeRoots": ["node_modules/@types"],
-
 		"paths": {
 			"@boot/*": ["./boot/*"],
 			"@component/*": ["./component/*"],
@@ -28,7 +25,7 @@
 			"@sample/*": ["./sample/*"],
 			"@setting/*": ["./setting/*"],
 			"@service/*": ["./service/*"],
-			"@type/*": ["./type/*"],
+			"@type/*": ["../type/*"],
 			"@utility/*": ["./utility/*"],
 			"@view/*": ["./view/*"]
 		}

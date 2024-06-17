@@ -12,12 +12,10 @@
 		"target": "ES2022",
 		"lib": ["ES2022", "dom"],
 
-		"types": ["node"],
-		"typeRoots": ["node_modules/@types"],
-
 		"paths": {
 			"@component/*": ["./component/*"],
 			"@connector/*": ["./connector/*"],
+			"@type/*": ["../type/*"],
 			"@view/*": ["./view/*"]
 		}
 	},

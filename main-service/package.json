@@ -7,7 +7,6 @@
 		"node": ">=20.13.1"
 	},
 	"scripts": {
-		"preinstall": "npm install typescript tsc tsc-alias rimraf pm2 --global",
 		"postinstall": "npm run build:source",
 		"build:source": "tsc && tsc-alias",
 		"prestart:service": "npm run build:source",
@@ -34,15 +33,7 @@
 	},
 	"homepage": "https://github.com/dump-work/swisspine-exame#readme",
 	"dependencies": {
-		"@hono/node-server": "^1.11.3",
 		"flat": "^6.0.1",
-		"hono": "^4.4.6",
-		"mongoose": "^8.4.1",
-		"rxjs": "^7.8.1",
-		"tslib": "^2.6.3"
-	},
-	"devDependencies": {
-		"@types/node": "^20.14.2",
-		"typescript": "^5.4.5"
+		"mongoose": "^8.4.1"
 	}
 }
