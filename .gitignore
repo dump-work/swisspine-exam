@@ -94,7 +94,6 @@ grass/**/*.*
 package-lock.json
 
 sample/*.*
-!sample/*.ts
 
 node_modules
 node_modules/**/*.*
