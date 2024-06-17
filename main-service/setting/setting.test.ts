@@ -9,4 +9,8 @@ export const SETTING: SystemSetting = {
 	},
 
 	STATE: ENVIRONMENT_STATE.TEST_STATE,
+
+	STORAGE: {
+		STORAGE_CONNECTION_PATH: "mongod://localhost:27017/swisspine-exam",
+	},
 };
