@@ -1,34 +1,43 @@
-<section>
-	External System
-	<!-- <cdk-accordion class="example-accordion">
-		@for (item of items; track item; let index = $index) {
+<section class="external-system-view">
+	<cdk-accordion class="external-system-list">
+		@for (externalSystemData of externalSystemList; track externalSystemData; let index =
+		$index) {
 		<cdk-accordion-item
 			#accordionItem="cdkAccordionItem"
-			class="example-accordion-item"
+			class="external-system-item"
 			role="button"
 			tabindex="0"
-			[attr.id]="'accordion-header-' + index"
+			[attr.id]="'external-system-item-header-' + index"
 			[attr.aria-expanded]="accordionItem.expanded"
-			[attr.aria-controls]="'accordion-body-' + index"
+			[attr.aria-controls]="'external-system-item-form-' + index"
 		>
 			<div class="example-accordion-item-header" (click)="accordionItem.toggle()">
-				{{ item }}
-				<span class="example-accordion-item-description">
-					Click to {{ accordionItem.expanded ? "close" : "open" }}
-				</span>
+				{{ externalSystemData.name }}
+				<button
+					mat-icon-button
+					aria-label="Expand"
+					[hidden]="accordionItem.opened ? 'hidden' : ''"
+				>
+					<mat-icon>keyboard_arrow_down</mat-icon>
+				</button>
+				<button
+					mat-icon-button
+					aria-label="Expand"
+					[hidden]="accordionItem.closed ? 'hidden' : ''"
+				>
+					<mat-icon>keyboard_arrow_up</mat-icon>
+				</button>
 			</div>
 			<div
-				class="example-accordion-item-body"
+				class="external-system-item-form"
 				role="region"
 				[style.display]="accordionItem.expanded ? '' : 'none'"
-				[attr.id]="'accordion-body-' + index"
-				[attr.aria-labelledby]="'accordion-header-' + index"
+				[attr.id]="'external-system-item-form-' + index"
+				[attr.aria-labelledby]="'external-system-item-header-' + index"
 			>
-				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis excepturi
-				incidunt ipsum deleniti labore, tempore non nam doloribus blanditiis veritatis illo
-				autem iure aliquid ullam rem tenetur deserunt velit culpa?
+				Test
 			</div>
 		</cdk-accordion-item>
 		}
-	</cdk-accordion> -->
+	</cdk-accordion>
 </section>

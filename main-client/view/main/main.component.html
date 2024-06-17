@@ -1,16 +1,9 @@
-<main>
-	<nav>
-		<ul>
-			<li>
-				<a
-					routerLink="/external-system"
-					routerLinkActive="active"
-					ariaCurrentWhenActive="page"
-					>External System</a
-				>
-			</li>
-		</ul>
-	</nav>
+<main class="main-view">
+	<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+	<mat-menu #menu="matMenu">
+		<a href="/external-system" mat-menu-item>External System</a>
+		<a href="/planner" mat-menu-item>Planner</a>
+	</mat-menu>
 
 	<section>
 		<router-outlet />
