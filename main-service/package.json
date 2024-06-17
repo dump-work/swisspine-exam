@@ -7,12 +7,12 @@
 		"node": ">=20.13.1"
 	},
 	"scripts": {
-		"postinstall": "npm run build:source",
-		"build:source": "tsc && tsc-alias",
-		"prestart:service": "npm run build:source",
-		"start:service": "pm2 start ./build --name=main",
-		"stop:service": "pm2 stop main",
-		"restart:service": "npm run stop:service && pm2 flush && npm run start:service && pm2 logs --lines 1000"
+		"postinstall": "npm run build",
+		"build": "tsc && tsc-alias",
+		"prestart": "npm run build:source",
+		"start": "pm2 start ./build --name=main",
+		"stop": "pm2 stop main",
+		"restart": "npm run stop:service && pm2 flush && npm run start:service && pm2 logs --lines 1000"
 	},
 	"keywords": [
 		"swisspine",
