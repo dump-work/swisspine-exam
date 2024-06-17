@@ -1,0 +1,27 @@
+{
+	"name": "swisspine-exam",
+	"version": "0.0.0",
+	"description": "SwissPine Technical Exam",
+	"engines": {
+		"node": ">=20.13.1"
+	},
+	"scripts": {},
+	"keywords": [
+		"swisspine",
+		"technical",
+		"exam"
+	],
+	"author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+	"contributors": [
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dump-work/swisspine-exame.git"
+	},
+	"bugs": {
+		"url": "https://github.com/dump-work/swisspine-exame/issues"
+	},
+	"homepage": "https://github.com/dump-work/swisspine-exame#readme"
+}

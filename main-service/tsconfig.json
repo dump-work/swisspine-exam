@@ -1,9 +1,9 @@
 {
-	"compileOnSave": false,
+	"extends": "../tsconfig.json",
 	"compilerOptions": {
 		"baseUrl": "./",
-		"module": "ES2022",
-		"moduleResolution": "Bundler",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
 		"outDir": "./build",
 
 		"sourceMap": true,
@@ -15,36 +15,7 @@
 		"types": ["node"],
 		"typeRoots": ["node_modules/@types"],
 
-		"alwaysStrict": true,
-		"strict": true,
-		"strictNullChecks": true,
-
-		"allowImportingTsExtensions": true,
-		"noEmit": true,
-		"allowUnreachableCode": false,
-		"allowSyntheticDefaultImports": true,
-		"declaration": false,
-		"downlevelIteration": true,
-		"esModuleInterop": true,
-		"experimentalDecorators": true,
-		"forceConsistentCasingInFileNames": true,
-		"importHelpers": true,
-		"isolatedModules": true,
-		"removeComments": true,
-		"resolveJsonModule": true,
-		"skipLibCheck": true,
-
-		"noFallthroughCasesInSwitch": true,
-		"noImplicitAny": true,
-		"noImplicitOverride": true,
-		"noImplicitReturns": true,
-		"noPropertyAccessFromIndexSignature": true,
-		"noUncheckedIndexedAccess": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-
 		"paths": {
-			"@/*": ["./*"],
 			"@boot/*": ["./boot/*"],
 			"@component/*": ["./component/*"],
 			"@constant/*": ["./constant/*"],
@@ -57,20 +28,11 @@
 			"@sample/*": ["./sample/*"],
 			"@setting/*": ["./setting/*"],
 			"@service/*": ["./service/*"],
-			"@type/*": ["./type/*"],
 			"@utility/*": ["./utility/*"],
 			"@view/*": ["./view/*"]
 		}
 	},
 
-	"angularCompilerOptions": {
-		"enableI18nLegacyMessageIdFormat": false,
-		"strictInjectionParameters": true,
-		"strictInputAccessModifiers": true,
-		"strictTemplates": true
-	},
-
-	"include": ["**/*.ts", "**/*.mts"],
-
+	"include": ["**/*.ts"],
 	"exclude": ["node_modules", "build"]
 }

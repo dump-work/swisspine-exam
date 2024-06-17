@@ -1,0 +1,27 @@
+{
+	"extends": "../tsconfig.json",
+	"compilerOptions": {
+		"baseUrl": "./",
+		"module": "ES2022",
+		"moduleResolution": "Bundler",
+		"outDir": "./build",
+
+		"sourceMap": true,
+		"sourceRoot": "/",
+
+		"target": "ES2022",
+		"lib": ["ES2022", "dom"],
+
+		"types": ["node"],
+		"typeRoots": ["node_modules/@types"],
+
+		"paths": {
+			"@component/*": ["./component/*"],
+			"@connector/*": ["./connector/*"],
+			"@view/*": ["./view/*"]
+		}
+	},
+
+	"include": ["**/*.ts"],
+	"exclude": ["node_modules", "build"]
+}
